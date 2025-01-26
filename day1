@@ -1,0 +1,55 @@
+#ECHO use in scripts
+
+
+echo "hello , hii , namaste,konicheua,junoon hai na "
+
+echo "lets learn devops"
+
+
+echo "***********************************************************************************"
+
+echo ""
+
+
+
+#variable in the scripts
+
+
+var1="swayam"
+var2="dost"
+
+
+echo "hii $var1 "
+echo "you are my $var2"
+
+
+echo "*************************************************************************************"
+
+
+#using variable and taking input
+
+
+
+#read -p "enter the first number:" a
+#read -p "enter the second number:" b
+
+#echo "$a"
+#echo  $b"
+#c=$a + $b
+#echo $c
+echo "**************************************************************************************"
+echo""
+
+#using build in variable
+echo "My current bash path - $BASH"
+echo "Bash version I am using - $BASH_VERSION"
+echo "PID of bash I am running - $$"
+echo "My home directory - $HOME"
+echo "Where am I currently? - $PWD"
+echo "My hostname - $HOSTNAME"
+
+echo "*****************************************************************************************"
+#wildcards
+
+echo "Files with .txt extension in the current directory:"
+ ls *.txt
