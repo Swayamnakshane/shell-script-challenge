@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+#
+
+
+
+
+
+echo "-c, --create create a user"
+echo "-d , --delete delete a user"
+
+echo "***********************************************************************"
+        read -p "enter the username:" username
+
+        if id "$username" &>/dev/null;then
+                echo "$username exits please write diffrent username"
+        else
+                read -p "enter the password for username:" password
+
+                sudo useradd -m -p "$password" "$username"
+
+                echo "user added sucessfully"
+
+        fi
+
+echo "************************************************************************"
+
+         read -p "enter the username you have to delete:" username
+
+         if id "$username" &>/dev/null;then
+                sudo userdel -r "$username"
+                 echo "$username had been deleted from the system"
+        else
+                echo "invalid $username please enter the another username"
+        fi
+
+echo "**************************************************************************"
