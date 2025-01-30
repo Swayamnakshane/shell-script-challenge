@@ -1,10 +1,26 @@
+read -p "check the directory exists or create a new directory:" dir
 
-#this code check weather file exists or not 
+if [ -e "$dir" ]; then
+        echo "$dir exists in the system"
+else
+        echo "directory dose not exists"
+        read -p "enter the name of directory:" d
+        mkdir "$d"
+        echo "directory $d created sucesfully"
+fi
+
+echo "***************************************************************************************************"
 read -p "enter the file name :" filename
 
 if [ -e "$filename" ]; then
         echo "$filename exists"
 else
         echo "$filename does not exist"
-fi
+        read -p "enter the name of the file:" f
+        touch "$f"
+        read -p "enter the message inside the file:" msg
+        echo "$msg" > "$f"
+        echo "file created succesfully"
+        cat "$f"
 
+fi
