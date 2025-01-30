@@ -1,0 +1,10 @@
+
+#this code check weather file exists or not 
+read -p "enter the file name :" filename
+
+if [ -e "$filename" ]; then
+        echo "$filename exists"
+else
+        echo "$filename does not exist"
+fi
+
